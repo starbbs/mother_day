@@ -34,7 +34,7 @@ body{ font-family:"宋体"; color:#3e3e3e; height:auto; overflow:hidden;backgrou
 .mask{display: none;width: 100%;height: 100%;background: rgba(0,0,0,0.8);position: fixed;top: 0px;left: 0px;z-index: 100;}
 .share{width: 231px;position: absolute;top: 30px;right: 30px;}
 
-.godown{ position:absolute; width:10%; height:20px; z-index:99; background:url(//static.goopal.com.cn/mother_day/img/arrow_down.png) no-repeat center center; background-size:contain; bottom:30px; left:50%; -moz-transform:translateX(-50%) translateY(0); -webkit-transform:translateX(-50%) translateY(0); transform:translateX(-50%) translateY(0); cursor:pointer; 
+.godown{ position:absolute; width:10%; height:13px; z-index:99; background:url(//static.goopal.com.cn/mother_day/img/arrow_down.png) no-repeat center center; background-size:contain; bottom:30px; left:50%; -moz-transform:translateX(-50%) translateY(0); -webkit-transform:translateX(-50%) translateY(0); transform:translateX(-50%) translateY(0); cursor:pointer; 
 /*      动画名 运动时间  拖延时间  循环  位置变化方式（由A-BB-A） */
 -moz-animation:animate 1s 3s linear infinite alternate;
 -webkit-animation:animate 1s 3s linear infinite alternate;

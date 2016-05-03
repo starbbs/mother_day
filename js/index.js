@@ -128,7 +128,6 @@ $.ajax({
 		if (data.status == 200) {
 			var returnData = data.data.signatureData;
 			wx.config({
-				debug: true, 
 				appId: returnData.appId,
 				timestamp: returnData.timestamp,
 				nonceStr: returnData.nonceStr,

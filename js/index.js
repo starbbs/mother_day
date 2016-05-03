@@ -135,7 +135,8 @@ $.ajax({
 				signature: returnData.signature,
 				jsApiList: [
 					'onMenuShareTimeline',
-					'onMenuShareAppMessage'
+					'onMenuShareAppMessage',
+					'hideMenuItems'
 				]
 			});
 			wx.ready(function() {

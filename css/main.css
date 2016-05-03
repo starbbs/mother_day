@@ -1,0 +1,97 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,input,ul,li,ol,dl,dd,dt,span,img,div,a,p,strong {padding:0; margin:0; list-style:none; border:0;}
+html{font-size:62.5%;}
+body{ font-family:"宋体"; color:#3e3e3e; height:auto; overflow:hidden;background: url(//static.goopal.com.cn/mother_day/img/bg.jpg);background-size: cover;}
+.w100{width: 100%;}
+.w80{width: 80%;}
+.w90{width: 90%;}
+.w60{width: 60%;}
+.ml5{margin-left: 5%;}
+.ml10{margin-left: 10%;}
+.ml20{margin-left: 20%;}
+.cl{clear: both;}
+.music{width: 3.1rem;position: absolute;right: 5%;top: 3%;z-index: 100;}
+.top-text-div{width: 65%;height: 100px;margin-left: 10%;margin-top: 20%;}
+.top-text-1{opacity: 0;}
+.top-text-2,.top-text-3{margin-top: 10px;opacity: 0;}
+.charge-desc{margin: 5% 20%;opacity: 0;}
+.btns{width: 100%;margin: 0 auto;opacity: 0;}
+.btns button{width: 30%;height: 3.4rem;font-size: 1.3rem;display: inline-block;text-decoration: none;outline: none;border: 1px solid #FFFFFF;background: #fc7274;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;color: #fff;text-align: center;margin-left: 13%;}
+.icon{width: 100%;position: absolute;bottom: 5%;text-align: center;z-index: 100;opacity: 0;}
+.icon img{width: 7.2rem;}
+.changjing{opacity: 0;margin-top: 10%;}
+.changjing-5{margin-top: 5%;}
+.on{opacity: 1;transition: all 3s;}
+
+.heart{position: absolute;top: 10%;left: 10%;z-index: 100;animation: heart 0.5s 3s linear infinite alternate;}
+
+/*loading页面*/
+.loading{width: 100%;height: 100%;position: absolute;top: 0px;left: 0px;}
+.loading-bg{width: 57px;margin: 0 auto;text-align: center;margin-top: 40%;margin-bottom: 30px;}
+.loading-text{width:100%;margin: 0 auto;text-align: center;color: #bc867a;font-size: 1.7rem;margin-top: 15%;font-family:"宋体";}
+.bless{font-size: 1.5rem;margin-top: 1rem;}
+/*share-mask分享页*/
+.mask{display: none;width: 100%;height: 100%;background: rgba(0,0,0,0.8);position: fixed;top: 0px;left: 0px;z-index: 100;}
+.share{width: 231px;position: absolute;top: 30px;right: 30px;}
+
+.godown{ position:absolute; width:10%; height:20px; z-index:99; background:url(//static.goopal.com.cn/mother_day/img/arrow_down.png) no-repeat center center; background-size:contain; bottom:30px; left:50%; -moz-transform:translateX(-50%) translateY(0); -webkit-transform:translateX(-50%) translateY(0); transform:translateX(-50%) translateY(0); cursor:pointer; 
+/*      动画名 运动时间  拖延时间  循环  位置变化方式（由A-BB-A） */
+-moz-animation:animate 1s 3s linear infinite alternate;
+-webkit-animation:animate 1s 3s linear infinite alternate;
+ animation:animate 1s 3s linear infinite alternate;
+}
+
+@-webkit-keyframes animate{
+	frome{ 
+		-webkit-transform:translateY(0px) translateX(-50%);
+		-moz-transform:translateY(0px) translateX(-50%);
+		transform:translateY(0px) translateX(-50%);
+	}
+	to{
+		-webkit-transform:translateY(-40%) translateX(-50%);
+		-moz-transform:translateY(-40%) translateX(-50%);
+		transform:translateY(-40%) translateX(-50%);
+	}
+}
+@-moz-keyframes animate{
+	frome{ 
+		-webkit-transform:translateY(0px) translateX(-50%);
+		-moz-transform:translateY(0px) translateX(-50%);
+		transform:translateY(0px) translateX(-50%);
+		}
+	to{
+		-webkit-transform:translateY(-40%) translateX(-50%);
+		-moz-transform:translateY(-40%) translateX(-50%);
+		transform:translateY(-40%) translateX(-50%);
+	}
+}
+@keyframes animate{
+	frome{ 
+		-webkit-transform:translateY(0px) translateX(-50%);
+		-moz-transform:translateY(0px) translateX(-50%);
+		transform:translateY(0px) translateX(-50%);
+	}
+	to{
+		-webkit-transform:translateY(-40%) translateX(-50%);
+		-moz-transform:translateY(-40%) translateX(-50%);
+		transform:translateY(-40%) translateX(-50%);
+	}
+}
+@-webkit-keyframes heart{
+	frome{ 
+		-webkit-transform:scale(0.8,0.8);
+		-moz-transform:scale(0.8,0.8);
+		transform:scale(0.8,0.8);
+	}
+	to{
+		-webkit-transform:scale(0.8,0.8);
+		-moz-transform:scale(0.8,0.8);
+		transform:scale(0.8,0.8);
+	}
+}
+/*竖屏浏览*/
+.tips-alert {width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;background: rgba(0,0,0,0.8);z-index: 1000;display: none;}
+.tips-alert p{font-size: 1.7rem;color: #FFFFFF;position: absolute;top: 65%;left: 0;width: 100%;text-align: center;}
+.rotate-iphone{width:74px;height:110px;background:url(http://stacdn201.ganjistatic1.com/att/project/touch/year_summary/img/phone.png) no-repeat center top;-webkit-background-size:contain;-ms-background-size:contain;background-size:contain;position:absolute;left:50%;top:50%;margin-left:-37px;margin-top:-80px}
+@-webkit-keyframes rotateSwing{0%{-webkit-transform:rotate(0)}50%{-webkit-transform:rotate(-90deg)}100%{-webkit-transform:rotate(0)}}@-ms-keyframes rotateSwing{0%{-ms-transform:rotate(0)}50%{-ms-transform:rotate(-90deg)}100%{-ms-transform:rotate(0)}}
+.rotate-iphone{-webkit-animation:rotateSwing 1.5s infinite ease-in;-ms-animation:rotateSwing 1.5s infinite ease-in}}

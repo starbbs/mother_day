@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<title>说出爱，别让妈妈等待</title>
+		<link rel="stylesheet" href="//static.goopal.com.cn/mother_day/css/main.css">
+		<link rel="stylesheet" href="//static.goopal.com.cn/mother_day/css/jquery.pagepiling.css" />
+	</head>
+		
+	<body>
+		<!--描述：音乐-->
+		<div style="display: none;">
+			<audio src="//static.goopal.com.cn/mother_day/music/music.mp3"  loop="loop" id="audio-bg"></audio>
+		</div>
+		<!--描述：Loading-->
+		<div class="loading">
+			<div class="cl"></div>
+			<div class="loading-bg">
+				<img src="//static.goopal.com.cn/mother_day/img/loading.png" class="w100"/>
+			</div>
+			<div class="loading-text">Loading......<span id="loading_per">1</span>%</div>
+			<div class="loading-text bless">妈妈，节日快乐</div>
+		</div>
+		<div class="music">
+			<img src="//static.goopal.com.cn/mother_day/img/music_on.png" class="w100"/>
+		</div>
+		<div class="icon">
+			<img src="//static.goopal.com.cn/mother_day/img/icon.png" align="absmiddle"/>
+		</div>
+		<!--<img src="img/heart.png" class="heart" />-->
+		<div id="pagepiling" style="display: none;">
+			<div class="section">
+				<div class="cl"></div>
+				<div class="w70 top-text-div">
+					<img src="//static.goopal.com.cn/mother_day/img/1_wz_1.png" class="w100 top-text-1 top-text-1-0" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/1_wz_2.png" class="w100 top-text-2 top-text-2-0" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/1_wz_3.png" class="w100 top-text-3 top-text-3-0" align="absmiddle"/>
+				</div>
+				<img src="//static.goopal.com.cn/mother_day/img/1_cj.png" class="w90 ml5 changjing changjing-0" />
+				<icon class="godown"></icon>
+			</div>
+			<div class="section">
+				<div class="cl"></div>
+				<div class="w70 top-text-div">
+					<img src="//static.goopal.com.cn/mother_day/img/2_wz_1.png" class="w100 top-text-1 top-text-1-1" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/2_wz_2.png" class="w100 top-text-2 top-text-2-1" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/2_wz_3.png" class="w100 top-text-3 top-text-3-1" align="absmiddle"/>
+				</div>
+				<img src="//static.goopal.com.cn/mother_day/img/2_cj.png" class="w90 ml5 changjing changjing-1" />
+			</div>
+			<div class="section">
+				<div class="cl"></div>
+				<div class="w70 top-text-div">
+					<img src="//static.goopal.com.cn/mother_day/img/3_wz_1.png" class="w100 top-text-1 top-text-1-2" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/3_wz_2.png" class="w100 top-text-2 top-text-2-2" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/3_wz_3.png" class="w100 top-text-3 top-text-3-2" align="absmiddle"/>
+				</div>
+				<img src="//static.goopal.com.cn/mother_day/img/3_cj.png" class="w90 ml5 changjing changjing-2" />
+			</div>
+			<div class="section">
+				<div class="cl"></div>
+				<div class="w70 top-text-div">
+					<img src="//static.goopal.com.cn/mother_day/img/4_wz_1.png" class="w100 top-text-1 top-text-1-3" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/4_wz_2.png" class="w100 top-text-2 top-text-2-3" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/4_wz_3.png" class="w100 top-text-3 top-text-3-3" align="absmiddle"/>
+				</div>
+				<img src="//static.goopal.com.cn/mother_day/img/4_cj.png" class="w90 ml5 changjing changjing-3" />
+			</div>
+			<div class="section">
+				<div class="cl"></div>
+				<div class="w70 top-text-div">
+					<img src="//static.goopal.com.cn/mother_day/img/5_wz_1.png" class="w100 top-text-1 top-text-1-4" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/5_wz_2.png" class="w100 top-text-2 top-text-2-4" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/5_wz_3.png" class="w100 top-text-3 top-text-3-4" align="absmiddle"/>
+				</div>
+				<img src="//static.goopal.com.cn/mother_day/img/5_cj.png" class="w90 ml5 changjing changjing-4" />
+			</div>
+			<div class="section">
+				<div class="cl"></div>
+				<div class="w80 top-text-div" style="width: 75%;">
+					<img src="//static.goopal.com.cn/mother_day/img/6_wz_1.png" class="w100 top-text-1 top-text-1-5" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/6_wz_2.png" class="w100 top-text-2 top-text-2-5" align="absmiddle"/>
+					<img src="//static.goopal.com.cn/mother_day/img/6_wz_3.png" class="w100 top-text-3 top-text-3-5" align="absmiddle"/>
+				</div>
+				<img src="//static.goopal.com.cn/mother_day/img/6_cj.png" class="w60 ml20 changjing changjing-5" />
+				<img src="//static.goopal.com.cn/mother_day/img/wenzi2.png" class="w60 charge-desc"  />
+				<div class="btns">
+					<button ontouchstart="window.location.href='http://www.goopal.com/wx'">悄悄给她充值</button>
+					<button ontouchstart="$('.mask').css('display','block');">写句话送妈妈</button>
+				</div>
+			</div>
+		</div>
+		<!--描述：分享页-->
+		<div class="mask" ontouchstart="$('.mask').css('display','none');">
+			<img src="img/share.gif" class="share"/>
+		</div>
+		<!--描述：建议竖屏浏览-->
+		<div class="tips-alert">
+			<div class="rotate-iphone"></div>
+			<p>竖屏体验更加</p>
+		</div>
+		<script type="text/javascript" src="//static.goopal.com.cn/mother_day/js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="//static.goopal.com.cn/mother_day/js/index.js" ></script>
+		<script type="text/javascript" src="//static.goopal.com.cn/mother_day/js/jquery.pagepiling.js" ></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	</body>
+
+</html>

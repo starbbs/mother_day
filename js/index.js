@@ -62,10 +62,10 @@ window.onload = function(){
 													$(".icon").removeClass("on");
 													$(".top-text-div img").removeClass("on");
 										            $(".changjing").removeClass("on");
-										            $(".changjing-"+0).addClass("on").css("transition-delay","0s");
-													$(".top-text-1-"+0).addClass("on").css("transition-delay","1s");
-													$(".top-text-2-"+0).addClass("on").css("transition-delay","2s");
-													$(".top-text-3-"+0).addClass("on").css("transition-delay","3s");
+										            $(".changjing-"+0).addClass("on").css("transition-delay","0.5s");
+													$(".top-text-1-"+0).addClass("on").css("transition-delay","1.5s");
+													$(".top-text-2-"+0).addClass("on").css("transition-delay","2.5s");
+													$(".top-text-3-"+0).addClass("on").css("transition-delay","3.5s");
 												});
 											}
 										},1000);

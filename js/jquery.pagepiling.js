@@ -249,13 +249,13 @@
             $(".changjing").removeClass("on").css("transition-delay","0.5s");
             $(".charge-desc").removeClass("on").css("transition-delay","0.5s");
 			$(".btns").removeClass("on").css("transition-delay","0.5s");
-            $(".changjing-"+v.sectionIndex).addClass("on").css("transition-delay","1s");
-			$(".top-text-1-"+v.sectionIndex).addClass("on").css("transition-delay","2s");
-			$(".top-text-2-"+v.sectionIndex).addClass("on").css("transition-delay","3s")
-			$(".top-text-3-"+v.sectionIndex).addClass("on").css("transition-delay","4s");
+            $(".changjing-"+v.sectionIndex).addClass("on").css("transition-delay","0.5s");
+			$(".top-text-1-"+v.sectionIndex).addClass("on").css("transition-delay","1.5s");
+			$(".top-text-2-"+v.sectionIndex).addClass("on").css("transition-delay","2.5s")
+			$(".top-text-3-"+v.sectionIndex).addClass("on").css("transition-delay","3.5s");
 			if(v.sectionIndex == 5){
-				$(".charge-desc").addClass("on").css("transition-delay","3s");
-				$(".btns").addClass("on").css("transition-delay","3.5s");
+				$(".charge-desc").addClass("on").css("transition-delay","3.5s");
+				$(".btns").addClass("on").css("transition-delay","4s");
 			}
 			//控制icon的显示和隐藏
 			if(v.sectionIndex == 0){

@@ -249,19 +249,19 @@
             $(".changjing").removeClass("on").css("transition-delay","0.5s");
             $(".charge-desc").removeClass("on").css("transition-delay","0.5s");
 			$(".btns").removeClass("on").css("transition-delay","0.5s");
-            $(".changjing-"+v.sectionIndex).addClass("on").css("transition-delay","0s");
-			$(".top-text-1-"+v.sectionIndex).addClass("on").css("transition-delay","1s");
-			$(".top-text-2-"+v.sectionIndex).addClass("on").css("transition-delay","2s")
-			$(".top-text-3-"+v.sectionIndex).addClass("on").css("transition-delay","3s");
+            $(".changjing-"+v.sectionIndex).addClass("on").css("transition-delay","1s");
+			$(".top-text-1-"+v.sectionIndex).addClass("on").css("transition-delay","2s");
+			$(".top-text-2-"+v.sectionIndex).addClass("on").css("transition-delay","3s")
+			$(".top-text-3-"+v.sectionIndex).addClass("on").css("transition-delay","4s");
 			if(v.sectionIndex == 5){
 				$(".charge-desc").addClass("on").css("transition-delay","3s");
 				$(".btns").addClass("on").css("transition-delay","3.5s");
 			}
 			//控制icon的显示和隐藏
 			if(v.sectionIndex == 0){
-				$(".icon").removeClass("on");
+				$(".icon").removeClass("on").css("transition-delay","0.5s");;
 			}else{
-				$(".icon").addClass("on");
+				$(".icon").addClass("on").css("transition-delay","0.5s");;
 			}
             //quiting when activeSection is the target element
             if(v.activeSection.is(destination)){ return; }

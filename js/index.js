@@ -146,41 +146,10 @@ $.ajax({
 				signature: returnData.signature,
 				jsApiList: [
 					'onMenuShareTimeline',
-					'onMenuShareAppMessage',
-					'hideMenuItems'
+					'onMenuShareAppMessage'
 				]
 			});
 			wx.ready(function() {
-				wx.hideMenuItems({
-					menuList: [ // 批量隐藏功能按钮接口
-						// 基本类
-						"menuItem:exposeArticle", // 举报
-						"menuItem:setFont", // 调整字体
-						"menuItem:dayMode", // 日间模式
-						"menuItem:nightMode", // 夜间模式
-						"menuItem:refresh", // 刷新
-						"menuItem:profile", // 查看公众号（已添加）
-						"menuItem:addContact", // 查看公众号（未添加）
-						// 传播类
-//									"menuItem:share:appMessage", // 发送给朋友
-//									"menuItem:share:timeline", // 分享到朋友圈
-						"menuItem:share:qq", // 分享到QQ
-						"menuItem:share:weiboApp", // 分享到Weibo
-//									"menuItem:favorite", // 收藏
-						"menuItem:share:facebook", // 分享到FB
-						"menuItem:share:QZone", // 分享到 QQ 空间
-						// 保护类
-						"menuItem:editTag", // 编辑标签
-						"menuItem:delete", // 删除
-						"menuItem:copyUrl", // 复制链接
-						"menuItem:originPage", // 原网页
-						"menuItem:readMode", // 阅读模式
-						"menuItem:openWithQQBrowser", // 在QQ浏览器中打开
-						"menuItem:openWithSafari", // 在Safari中打开
-						"menuItem:share:email", // 邮件
-						"menuItem:share:brand", // 一些特殊公众号
-					]
-				});
 				setShare();
 			});
 		}

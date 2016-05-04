@@ -130,7 +130,7 @@ var setShare = function() {
 	});
 };
 $.ajax({
-	url: '//endpoint.goopal.com.cn/common/weixin/signature',
+	url: 'https://endpoint.goopal.com.cn/common/weixin/signature',
 	type: 'post',
 	data: JSON.stringify({
 		url: window.location.href

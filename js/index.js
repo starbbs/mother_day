@@ -33,53 +33,53 @@ window.onload = function(){
 	$('#audio-bg').get(0).pause();
 	var per = parseInt($("#loading_per").html());
 	document.addEventListener("WeixinJSBridgeReady", function () {
-		var perListener1 = setInterval(function(){
-			if(per == 23){
-				clearInterval(perListener1);
-				setTimeout(function(){
-					var perListener2 = setInterval(function(){
-						if(per == 67){
-							clearInterval(perListener2);
-							setTimeout(function(){
-								var perListener3 = setInterval(function(){
-									if(per == 99){
-										clearInterval(perListener3);
-										setTimeout(function(){
-											if(document.readyState=='complete'){ 
-												WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-									                network = e.err_msg.split(":")[1];
-									 				playAudio();
-									            });
-												$("#loading_per").html("100");
-												$(".loading").animate({
-													"opacity" : "0"
-												},1000,function(){
-													$(".music").show();
-													$("#pagepiling").show();
-													$("#pagepiling").animate({
-														"opacity" : "1"
-													},1000);
-													$(".icon").removeClass("on");
-													$(".top-text-div img").removeClass("on");
-										            $(".changjing").removeClass("on");
-										            $(".changjing-"+0).addClass("on").css("transition-delay","0.5s");
-													$(".top-text-1-"+0).addClass("on").css("transition-delay","1.5s");
-													$(".top-text-2-"+0).addClass("on").css("transition-delay","2.5s");
-													$(".top-text-3-"+0).addClass("on").css("transition-delay","3.5s");
-												});
-											}
-										},1000);
-									}
-									$("#loading_per").html(per++);
-								},50);
-							},500);
-						}
-						$("#loading_per").html(per++);
-					},50);
-				},500);
-			}
-			$("#loading_per").html(per++);
-		},50);
+		WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+			var perListener1 = setInterval(function(){
+				if(per == 23){
+					clearInterval(perListener1);
+					setTimeout(function(){
+						var perListener2 = setInterval(function(){
+							if(per == 67){
+								clearInterval(perListener2);
+								setTimeout(function(){
+									var perListener3 = setInterval(function(){
+										if(per == 99){
+											clearInterval(perListener3);
+											setTimeout(function(){
+												if(document.readyState=='complete'){ 
+										                network = e.err_msg.split(":")[1];
+										 				playAudio();
+													$("#loading_per").html("100");
+													$(".loading").animate({
+														"opacity" : "0"
+													},1000,function(){
+														$(".music").show();
+														$("#pagepiling").show();
+														$("#pagepiling").animate({
+															"opacity" : "1"
+														},1000);
+														$(".icon").removeClass("on");
+														$(".top-text-div img").removeClass("on");
+											            $(".changjing").removeClass("on");
+											            $(".changjing-"+0).addClass("on").css("transition-delay","0.5s");
+														$(".top-text-1-"+0).addClass("on").css("transition-delay","1.5s");
+														$(".top-text-2-"+0).addClass("on").css("transition-delay","2.5s");
+														$(".top-text-3-"+0).addClass("on").css("transition-delay","3.5s");
+													});
+												}
+											},1000);
+										}
+										$("#loading_per").html(per++);
+									},50);
+								},500);
+							}
+							$("#loading_per").html(per++);
+						},50);
+					},500);
+				}
+				$("#loading_per").html(per++);
+			},50);
+		});
 	}, false);
 }
 var playAudio =  function() {

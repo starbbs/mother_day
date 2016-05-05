@@ -42,12 +42,6 @@ window.onload = function(){
 						clearInterval(perListener3);
 						setTimeout(function(){
 							if(document.readyState=='complete'){ 
-								var bg = $('#audio-bg').get(0);
-								if(bg.paused){
-									console.log(1);	
-								}
-//								$('#audio-bg').get(0).play();
-								
 								$("#loading_per").html("100");
 								$(".loading").animate({
 									"opacity" : "0"
@@ -93,6 +87,7 @@ var videoPlay = function(event){
 }
 // 分享
 var shareWord = "妈妈老了，岁月请别欺负她 （2分钟看哭了很多人）";
+var shareWordQQ = "妈妈老了，岁月请别欺负她 ";
 var shareDesc = "妈，我想您了，有很多话想对您说……";
 var baseUrl = 'http://www.goopal.com.cn/mother_day';
 var wx_title = shareWord;
@@ -131,22 +126,7 @@ var setShare = function() {
 		}
 	});
 	wx.onMenuShareQQ({
-	    title: wx_title,
-		desc: wx_desc,
-		link: wx_link,
-		imgUrl: wx_imgUrl,
-		success: function() {
-			console.log('分享成功');
-		},
-		cancel: function() {
-			console.log('分享取消');
-		},
-		error: function() {
-			console.log('分享失败');
-		}
-	});
-	wx.onMenuShareQZone({
-	    title: wx_title,
+	    title: shareWordQQ,
 		desc: wx_desc,
 		link: wx_link,
 		imgUrl: wx_imgUrl,
@@ -172,6 +152,7 @@ $.ajax({
 		if (data.status == 200) {
 			var returnData = data.data.signatureData;
 			wx.config({
+				debug: true, 
 				appId: returnData.appId,
 				timestamp: returnData.timestamp,
 				nonceStr: returnData.nonceStr,
@@ -180,10 +161,15 @@ $.ajax({
 					'onMenuShareTimeline',
 					'onMenuShareAppMessage',
 					'onMenuShareQQ',
-					'onMenuShareQZone'
+					'hideMenuItems'
 				]
 			});
 			wx.ready(function() {
+				wx.hideMenuItems({
+					menuList: [ // 批量隐藏功能按钮接口
+						"menuItem:share:QZone" // 分享到 QQ 空间
+					]
+				});
 				setShare();
 			});
 		}

@@ -42,6 +42,7 @@ window.onload = function(){
 						clearInterval(perListener3);
 						setTimeout(function(){
 							if(document.readyState=='complete'){ 
+								$('#audio-bg').get(0).play();
 								$("#loading_per").html("100");
 								$(".loading").animate({
 									"opacity" : "0"

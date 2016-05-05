@@ -42,7 +42,10 @@ window.onload = function(){
 						clearInterval(perListener3);
 						setTimeout(function(){
 							if(document.readyState=='complete'){ 
-								$('#audio-bg').get(0).play();
+								var musicClass = $(".music").attr("class");
+								if(musicClass.indexOf("on") >= 0 && $('#audio-bg').get(0).paused){
+									$('#audio-bg').get(0).play();
+								}
 								$("#loading_per").html("100");
 								$(".loading").animate({
 									"opacity" : "0"

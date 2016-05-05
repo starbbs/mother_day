@@ -11,7 +11,7 @@ body{ font-family:"宋体"; color:#3e3e3e; height:auto; overflow:hidden;backgrou
 .ml20{margin-left: 20%;}
 .cl{clear: both;}
 .music{width: 3.1rem;position: absolute;right: 5%;top: 3%;z-index: 100;}
-.top-text-div{width: 65%;height: 100px;margin-left: 10%;margin-top: 20%;}
+.top-text-div{width: 65%;margin-left: 10%;margin-top: 20%;}
 .top-text-1{opacity: 0;}
 .top-text-2,.top-text-3{margin-top: 10px;opacity: 0;}
 .charge-desc{margin: 5% 20%;opacity: 0;}
@@ -19,8 +19,8 @@ body{ font-family:"宋体"; color:#3e3e3e; height:auto; overflow:hidden;backgrou
 .btns button{width: 32%;height: 3.4rem;font-size: 1.3rem;display: inline-block;text-decoration: none;outline: none;border: 1px solid #FFFFFF;background: #fc7274;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;color: #fff;text-align: center;margin-left: 12%;padding: 0;}
 .icon{width: 100%;position: absolute;bottom: 5%;text-align: center;z-index: 0;opacity: 0;}
 .icon img{width: 7.2rem;}
-.changjing{opacity: 0;margin-top: 10%;}
-.changjing-5{margin-top: 5%;}
+.changjing{opacity: 0;margin-top: 16%;}
+.changjing-5{margin-top: 10%;}
 .on{opacity: 1;transition: all 3s;}
 
 .heart{position: absolute;top: 10%;left: 10%;z-index: 100;animation: heart 0.5s 3s linear infinite alternate;}

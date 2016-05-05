@@ -1,9 +1,19 @@
+var firstFlag = true;
 (function() {
 	$('body').on('touchmove touchstart', function (event) {
 	    event.preventDefault();
 	});
 	$(".icon").addClass("on");
 	$(".loading").height($(window).height());
+	$(document).on("touchstart",function(event){
+		if(firstFlag){
+			var musicClass = $(".music").attr("class");
+			if(musicClass.indexOf("on") >= 0 && $('#audio-bg').get(0).paused){
+				$('#audio-bg').get(0).play();
+			}
+			firstFlag = false;
+		}
+	});
 	$('.music').on('touchstart', function(event) {
 		videoPlay(event);
 	});
@@ -20,10 +30,8 @@
 		orient();
 	});
 })();
-var firstFlag = true;
 window.onload = function(){
 	$('#pagepiling').pagepiling();
-	$('#audio-bg').get(0).pause();
 	var per = parseInt($("#loading_per").html());
 	var perListener1 = setInterval(function(){
 		if(per == 23){
@@ -34,13 +42,12 @@ window.onload = function(){
 						clearInterval(perListener3);
 						setTimeout(function(){
 							if(document.readyState=='complete'){ 
-								$('#audio-bg').get(0).play();
-								$(document).on("touchstart",function(event){
-									if(firstFlag){
-										$('#audio-bg').get(0).play();
-										firstFlag = false;
-									}
-								});
+								var bg = $('#audio-bg').get(0);
+								if(bg.paused){
+									console.log(1);	
+								}
+//								$('#audio-bg').get(0).play();
+								
 								$("#loading_per").html("100");
 								$(".loading").animate({
 									"opacity" : "0"
@@ -123,6 +130,36 @@ var setShare = function() {
 			console.log('分享失败');
 		}
 	});
+	wx.onMenuShareQQ({
+	    title: wx_title,
+		desc: wx_desc,
+		link: wx_link,
+		imgUrl: wx_imgUrl,
+		success: function() {
+			console.log('分享成功');
+		},
+		cancel: function() {
+			console.log('分享取消');
+		},
+		error: function() {
+			console.log('分享失败');
+		}
+	});
+	wx.onMenuShareQZone({
+	    title: wx_title,
+		desc: wx_desc,
+		link: wx_link,
+		imgUrl: wx_imgUrl,
+		success: function() {
+			console.log('分享成功');
+		},
+		cancel: function() {
+			console.log('分享取消');
+		},
+		error: function() {
+			console.log('分享失败');
+		}
+	});
 };
 $.ajax({
 	url: 'https://endpoint.goopal.com.cn/common/weixin/signature',
@@ -141,7 +178,9 @@ $.ajax({
 				signature: returnData.signature,
 				jsApiList: [
 					'onMenuShareTimeline',
-					'onMenuShareAppMessage'
+					'onMenuShareAppMessage',
+					'onMenuShareQQ',
+					'onMenuShareQZone'
 				]
 			});
 			wx.ready(function() {

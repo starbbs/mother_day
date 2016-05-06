@@ -1,5 +1,5 @@
 var firstFlag = true;
-(function() {
+window.onload = function(){
 	$('body').on('touchmove touchstart', function (event) {
 	    event.preventDefault();
 	});
@@ -29,8 +29,6 @@ var firstFlag = true;
 	$(window).bind( 'orientationchange', function(e){
 		orient();
 	});
-})();
-window.onload = function(){
 	$('#pagepiling').pagepiling();
 	var per = parseInt($("#loading_per").html());
 	var perListener1 = setInterval(function(){
